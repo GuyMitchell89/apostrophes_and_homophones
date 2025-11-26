@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Functional Skills English – Entry 3 | Apostrophes & Homophones</title>
+<style>
+:root {
+  --bg: #f8fafc;
+  --panel: #ffffff;
+  --ink: #0f172a;
+  --muted: #475569;
+  --accent: #2563eb;
+  --accent-2: #10b981;
+  --warn: #ef4444;
+}
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  margin: 0;
+}
+header {
+  background: linear-gradient(90deg, var(--accent), #7c3aed);
+  color: white;
+  padding: 24px;
+}
+header h1 { margin:0; font-size:1.75rem; }
+header p { margin:8px 0 0; opacity:0.9; }
+main { max-width:960px; margin:24px auto; padding:0 16px 48px; }
+.card { background: var(--panel); border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,0.08); padding:20px; margin:16px 0; }
+h2,h3 { margin-top:0; }
+.explain { color: var(--muted); }
+.grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:12px; }
+.q { margin:12px 0; }
+.q label { display:block; margin-bottom:6px; font-weight:600; }
+.q input[type="text"], .q select, .q textarea { width:100%; padding:10px; border:1px solid #cbd5e1; border-radius:8px; }
+.tag { display:inline-block; padding:4px 8px; border-radius:999px; background:#eef2ff; color:#3730a3; font-size:0.85rem; }
+.actions { display:flex; gap:10px; flex-wrap:wrap; margin-top:12px; }
+button { padding:10px 14px; border:none; border-radius:8px; background:var(--accent); color:white; cursor:pointer; }
+button.secondary { background:#0ea5e9; }
+button.ghost { background:transparent; border:1px dashed #94a3b8; color:#0f172a; }
+.result { margin-top:8px; font-weight:600; }
+.correct { color: var(--accent-2); }
+.incorrect { color: var(--warn); }
+.neutral { color: var(--muted); }
+.hidden { display:none; }
+footer { text-align:center; color: var(--muted); padding:24px 0 48px; }
+.split { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+@media(max-width:840px){ .split { grid-template-columns:1fr; } }
+.kb { background:#f1f5f9; border:1px solid #e2e8f0; border-radius:12px; padding:12px; }
+.small { font-size:0.9rem; }
+.hr { border-top:1px dashed #e2e8f0; margin:16px 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Functional Skills English – Entry 3</h1>
+  <p>Apostrophes & Homophones (Interactive Worksheet)</p>
+</header>
+
+<main>
+<div class="card split">
+  <div>
+    <h2>Part 1: Apostrophes</h2>
+    <p class="explain">
+      <strong>Use apostrophes for:</strong>
+      <span class="tag">Contractions</span> (missing letters: <em>don’t = do not</em>)
+      and
+      <span class="tag">Possession</span> (belongs to: <em>Sarah’s book</em>). Avoid apostrophes for plurals.<br>
+      <strong>Examples:</strong> <em>It’s</em> raining (It is); the <em>dog’s</em> tail (tail of the dog).
+    </p>
+  </div>
+  <div class="kb">
+    <h3>Teacher Tips</h3>
+    <ul class="small">
+      <li>Highlight <em>its</em> vs <em>it’s</em>.</li>
+      <li>Names ending in <em>s</em>: use <em>James’s</em> consistently.</li>
+      <li>Read aloud to check contractions.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card" id="t1">
+<h3>Task 1: Add the Missing Apostrophes</h3>
+<p class="explain">Rewrite each sentence correctly.</p>
+<div class="q"><label>1) Its raining outside.</label><input type="text"></div>
+<div class="q"><label>2) I cant find my keys.</label><input type="text"></div>
+<div class="q"><label>3) The dogs tail is wagging.</label><input type="text"></div>
+<div class="q"><label>4) Lets go to the park.</label><input type="text"></div>
+<div class="q"><label>5) Whos coming to the party?</label><input type="text"></div>
+<div class="actions">
+  <button onclick="markT1()">Check answers</button>
+  <button class="ghost" onclick="toggleHint('h1')">Show hints</button>
+  <button class="secondary" onclick="showAnswers('t1')">Reveal model answers</button>
+</div>
+<div id="h1" class="hidden small"><div class="hr"></div>
+<p>Is it a contraction (<em>it is, cannot, let us, who is</em>) or possession (<em>dog’s tail</em>)?</p>
+</div>
+<div class="result neutral" id="r1">—</div>
+</div>
+
+<div class="card" id="t3">
+<h3>Task 3: Possession</h3>
+<p class="explain">Rewrite each phrase using apostrophes to show possession.</p>
+<div class="q"><label>1) The shoes of the girl →</label><input type="text" placeholder="_____ shoes"></div>
+<div class="q"><label>2) The toys of the children →</label><input type="text" placeholder="_____ toys"></div>
+<div class="q"><label>3) The car of James →</label><input type="text" placeholder="_____ car"></div>
+<div class="actions">
+  <button onclick="markT3()">Check answers</button>
+  <button class="ghost" onclick="toggleHint('h3')">Show hints</button>
+  <button class="secondary" onclick="showAnswers('t3')">Reveal model answers</button>
+</div>
+<div id="h3" class="hidden small"><div class="hr"></div>
+<p>Use apostrophe + s for possession, even with irregular plurals like <em>children</em>.</p>
+</div>
+<div class="result neutral" id="r3">—</div>
+</div>
+
+<script>
+function toggleHint(id){ document.getElementById(id).classList.toggle('hidden'); }
+function norm(s){ return (s||'').trim().toLowerCase().replace(/\s+/g,' '); }
+function showAnswers(sectionId){
+  const result=document.querySelector('#'+sectionId+' .result');
+  const keyMap={t1:["It’s raining outside.","I can’t find my keys.","The dog’s tail is wagging.","Let’s go to the park.","Who’s coming to the party?"], t3:["girl’s shoes","children’s toys","James’s car"]};
+  result.innerHTML='<span class="correct">Model answers: </span>'+keyMap[sectionId].join(' | ');
+}
+function markT1(){
+  const inputs=document.querySelectorAll('#t1 input');
+  const answers=["it’s raining outside.","i can’t find my keys.","the dog’s tail is wagging.","let’s go to the park.","who’s coming to the party?"];
+  let score=0;
+  inputs.forEach((el,i)=>{ if(norm(el.value)===answers[i]) score++; });
+  document.getElementById('r1').innerHTML = score===5? '<span class="correct">All correct! 5/5</span>':`<span class="incorrect">${score}/5 correct. Keep going!</span>`;
+}
+function markT3(){
+  const inputs=document.querySelectorAll('#t3 input');
+  const answers=["girl’s shoes","children’s toys","james’s car"];
+  let score=0;
+  inputs.forEach((el,i)=>{ if(norm(el.value)===answers[i]) score++; });
+  document.getElementById('r3').innerHTML = score===3? '<span class="correct">Great! 3/3</span>':`<span class="incorrect">${score}/3 correct. Check apostrophe placement.</span>`;
+}
+</script>
+
+</body>
+</html>
